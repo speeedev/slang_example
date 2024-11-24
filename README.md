@@ -16,12 +16,13 @@ This project demonstrates how to implement localization (i18n) in a Flutter appl
 - `lib/main.dart`: The entry point of the application, which includes localization setup and the main navigation structure.
 - `lib/views/login_view.dart`: The login screen, where users can input their credentials and navigate to the home screen.
 - `lib/views/home_view.dart`: The home screen, displaying a welcome message and a dropdown for language selection.
-- `lib/i18n/`: Contains the JSON files and generated Dart files for localization.
+- `assets/i18n/`: Contains the JSON files.
+- `lib/i18n/`: Contains generated Dart files for localization. 
 
 **Localization Process**
 
-1. Define Localization Files
-Create JSON files for each supported language in the lib/i18n directory. For example:
+### 1. Define Localization Files
+Create JSON files for each supported language in the assets/i18n directory. For example:
 
 - `strings.i18n.json` (default locale: English)
 - `strings_tr.i18n.json` (Turkish translations)
@@ -60,7 +61,48 @@ dart run slang
 
 This generates files such as `strings.g.dart` in the `lib/i18n` directory.
 
-### 3. Use Translations in Code
+### 3. Main Dart Configuration
+
+In this step, we configure the app's localization and initialization settings in main.dart. This ensures that the app automatically adapts to the user's device language and enables translation features across the app.
+
+
+**Main Function Configuration**
+
+```dart
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();  // Automatically sets the app's locale based on device settings
+  runApp(
+    TranslationProvider(  // Provides access to translations globally in the app
+      child: const MyApp(),
+    ),
+  );
+}
+```
+
+**MaterialApp Configuration**
+
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      locale: TranslationProvider.of(context).flutterLocale,  // Uses the locale set by TranslationProvider
+      supportedLocales: AppLocaleUtils.supportedLocales,
+      localizationsDelegates: GlobalMaterialLocalizations.delegates,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: LoginView(),  // The first screen displayed in the app
+    );
+  }
+}
+```
+
+### Final: Use Translations in Code
 Access localized strings via the `t` variable:
 
 ```dart
@@ -101,3 +143,7 @@ Run the Application Start the application using:
 ```
 flutter run
 ```
+
+Thanks for read.
+
+Medium content: 
