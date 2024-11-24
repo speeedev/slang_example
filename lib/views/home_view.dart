@@ -28,9 +28,14 @@ class HomeView extends StatelessWidget {
               Text(
                   "${t.views.home.language}: ${LocaleSettings.currentLocale.languageCode}",
                   style: Theme.of(context).textTheme.displayMedium),
+              const SizedBox(height: 8),
               SizedBox(
                 width: 200,
-                child: DropdownButton(
+                child: DropdownButtonFormField(
+                  decoration: const InputDecoration(
+                    fillColor: Colors.white70,
+                    filled: true,
+                  ),
                   value: LocaleSettings.currentLocale,
                   items: AppLocale.values
                       .map((locale) => DropdownMenuItem(
