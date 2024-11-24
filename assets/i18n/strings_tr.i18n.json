@@ -1,0 +1,20 @@
+{
+  "views": {
+    "login": {
+      "welcome": "Hoşgeldiniz",
+      "userName": "Kullanıcı Adı",
+      "password": "Parola",
+      "loginButton": "Giriş Yap",
+      "forgotPassword": "Parolanızı mı unuttunuz?",
+      "userNameRequired": " Kullanıcı adı gerekli",
+      "passwordRequired": "Parola gerekli",
+      "passwordInvalid": "Parola geçersiz"
+    },
+    "home": {
+      "welcome": "Ana Sayfaya Hoşgeldiniz!",
+      "greeting": "Merhaba, $userName!",
+      "language": "Dil",
+      "changeLanguage": "Dili Değiştir"
+    }
+  }
+}

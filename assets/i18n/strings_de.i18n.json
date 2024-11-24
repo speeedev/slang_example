@@ -1,0 +1,20 @@
+{
+  "views": {
+    "login": {
+      "welcome": "Willkommen",
+      "userName": "Benutzername",
+      "password": "Passwort",
+      "loginButton": "Einloggen",
+      "forgotPassword": "Passwort vergessen?",
+      "userNameRequired": "Benutzername ist erforderlich",
+      "passwordRequired": "Passwort ist erforderlich",
+      "passwordInvalid": "Passwort ist ungültig"
+    },
+    "home": {
+      "welcome": "Willkommen zu Hause!",
+      "greeting": "Hallo, $userName!",
+      "language": "Sprache",
+      "changeLanguage": "Sprache ändern"
+    }
+  }
+}
