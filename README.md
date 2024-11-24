@@ -1,3 +1,5 @@
+**Medium content:** https://medium.com/@speedev/flutterda-lokalizasyon-i18n-nas%C4%B1l-yap%C4%B1l%C4%B1r-ad%C4%B1m-ad%C4%B1m-0c438fcb8537 (Turkish)
+
 # Flutter Slang Localization Example
 
 This project demonstrates how to implement localization (i18n) in a Flutter application using the Slang package efficiently and effectively. The application includes two main screens: a login screen (`LoginView`) and a home screen (`HomeView`). It also features dynamic language switching and automatic language detection based on the device's default settings.
@@ -145,5 +147,3 @@ flutter run
 ```
 
 Thanks for read.
-
-**Medium content:** https://medium.com/@speedev/flutterda-lokalizasyon-i18n-nas%C4%B1l-yap%C4%B1l%C4%B1r-ad%C4%B1m-ad%C4%B1m-0c438fcb8537
