@@ -130,8 +130,8 @@ LocaleSettings.setLocale(AppLocale.tr); // Switch to Turkish.
 Clone the Repository
 
 ```
-git clone https://github.com/your-username/slang-localization-example.git
-cd slang-localization-example
+git clone https://github.com/speeedev/slang_example.git
+cd slang-example
 ```
 
 Install Dependencies Run the following command to install the required packages:
